@@ -1,0 +1,15 @@
+table {
+    background-color: gold; /* Warna background emas */
+    border-style: double; 
+}
+
+table, th, td {
+    border: 1px solid black; /* Border 1px solid */
+    padding: 5px; /* Padding 5px */
+    border-style: double; 
+}
+
+th {
+    background-color: gold; /* Warna background header emas */
+    border-style: double; 
+}

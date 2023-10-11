@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <table>
+        <tr>
+            <td><label>Bilangan Pertama: </label></td>
+            <td><input type="text" id="bilangan1" /></td>
+            <td><label>Bilangan Kedua  : </label></td>
+            <td><input type="text" id="bilangan2" /></td>
+        </tr>
+        <tr>
+            <td><button onclick="penjumlahan()">Jumlahkan</button>
+                <button onclick="ulang()">Ulang</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function penjumlahan() {
+            // Mengambil nilai dari input
+            var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+            var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+            // Melakukan operasi penjumlahan
+            var hasil = bilangan1 + bilangan2;
+
+            // Menampilkan hasil dalam bentuk alert
+            alert("Hasil penjumlahan: " + hasil);
+        }
+
+        function ulang() {
+            // Mengosongkan nilai input
+            document.getElementById("bilangan1").value = "";
+            document.getElementById("bilangan2").value = "";
+        }
+    </script>
+</body>
+</html>

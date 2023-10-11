@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #3498db;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        label {
+            font-weight: normal;
+            color:gray;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #f0f0f0;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            background-color: #3498db;
+            border: 1px solid #3498db;
+            color:white;
+        }
+
+        .alert {
+            display: none;
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="registration-form">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="alamat">Alamat:</label>
+            <textarea type="text" id="alamat" name="alamat"></textarea>
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("registration-form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const nama = document.getElementById("nama").value;
+                const email = document.getElementById("email").value;
+                const alamat = document.getElementById("alamat").value;
+
+                if (!nama || !email || !alamat) {
+                    alert("Anda harus mengisi data dengan lengkap!"); 
+                } else {
+                    alert("Pendaftaran berhasil!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

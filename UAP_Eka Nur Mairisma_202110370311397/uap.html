@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uap</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Kode</th>
+            <th>Barang</th>
+            <th>Harga</th>
+        </tr>
+        <tr>
+            <th>001</th>
+            <th>Barang A</th>
+            <th>10000</th>
+        </tr>
+        <tr>
+            <th>002</th>
+            <th>Barang B</th>
+            <th>20000</th>
+        </tr>
+        <tr>
+            <th>003</th>
+            <th>Barang C</th>
+            <th>30000</th>
+        </tr>
+    </table>
+
+    <h1>Inputan User</h1>
+    <table>
+        <tr>
+            <td>Masukkan Kode :</td>
+            <td><input type="text" id="kode" /></td> 
+        </tr>
+        <tr>
+            <td>Banyaknya Barang :</td>
+            <td><input type="number" id="banyak" /></td>
+        </tr>
+        <td>
+            <button onclick="perkalian()">Submit</button>
+        </td>
+    </table>
+    
+    <script>
+
+        function perkalian(){
+            var kode = parseFloat(document.getElementById("kode").value);
+            var angka = parseFloat(document.getElementById("angka").value);
+    
+            if (kode="001") {
+                harga=10000
+            }if (kode="002") {
+                harga=20000
+            }if(kode="003"){
+                harga=3000
+            }
+    
+            var total = harga*angka;
+    
+            alert("Hasil perkalian : " + total);
+        }
+    </script>
+</body>
+</html>
